@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ODS'S</title>
+    <title>Base</title>
     <style>
       .menu-toggle {
         display: flex;
@@ -180,58 +180,79 @@
         }
       }
 
-      /* ===== ESTILOS PARA A PÁGINA ODS ===== */
+      /* ===== ADICIONADO: ESTILOS PARA AS ODS ===== */
+      
+      /* ADICIONADO: Adicionando box-sizing para melhor controle */
+      * {
+        box-sizing: border-box;
+      }
 
-      /* Container principal da página */
+      /* ADICIONADO: Container principal das ODS */
       .ods-main-container {
         padding: 20px;
-        margin-top: 100px;
-      }
-
-      .ods-container {
-        text-align:center;
-        margin: 20px;
-        cursor: pointer;
-        transition: transform 0.2s;
-
-      }
-
-      .ods-container:hover {
-        transform: scale(1.05);
-      }
-      
-      /* Container das imagens ODS em grid */
-      .ods-cards-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-        margin-bottom: 20px;
-        max-width: 300px;
+        margin-top: 30px;
+        max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
       }
 
-      /* Item individual da imagem ODS */
+      /* ADICIONADO: Grid responsivo para as ODS */
+      .ods-cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+        width: 100%;
+      }
 
+      /* ADICIONADO: Container individual de cada ODS com brilho fixo */
+      .ods-container {
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 15px;
+        /* ADICIONADO: Brilho fixo - múltiplas camadas de box-shadow */
+        box-shadow: 
+          0 0 10px rgba(78, 205, 196, 0.4),
+          0 0 20px rgba(78, 205, 196, 0.3),
+          0 0 30px rgba(78, 205, 196, 0.2),
+          0 4px 8px rgba(0,0,0,0.1);
+        border: 1px solid rgba(78, 205, 196, 0.3);
+      }
 
+      /* ADICIONADO: Efeito hover nas ODS - intensifica o brilho */
+      .ods-container:hover {
+        transform: scale(1.05);
+        box-shadow: 
+          0 0 15px rgba(78, 205, 196, 0.6),
+          0 0 30px rgba(78, 205, 196, 0.4),
+          0 0 45px rgba(78, 205, 196, 0.3),
+          0 6px 15px rgba(0,0,0,0.2);
+        border: 1px solid rgba(78, 205, 196, 0.5);
+      }
 
-
-      /* Imagens das ODS */
+      /* ADICIONADO: Estilo das imagens das ODS */
       .ods-image {
         width: 100%;
+        max-width: 200px;
         height: auto;
-        border-radius: 8px;
+        border-radius: 10px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         display: block;
+        margin: 0 auto 15px auto;
       }
 
+      /* ADICIONADO: Descrição das ODS */
       .ods-description {
-        margin-top: 19px;
-        font-size: 16px;
+        font-size: 14px;
         color: #333;
+        line-height: 1.4;
+        text-align: justify;
       }
 
-      /* Botão Saiba Mais */
+      /* ADICIONADO: Botão Saiba Mais com brilho */
       .saiba-mais-btn {
         background-color: white;
         color: #4ecdc4;
@@ -242,74 +263,109 @@
         cursor: pointer;
         margin: 20px auto;
         display: block;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        transition: transform 0.3s ease;
+        box-shadow: 
+          0 0 8px rgba(78, 205, 196, 0.3),
+          0 4px 8px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
+      /* ADICIONADO: Efeito hover do botão - intensifica o brilho */
       .saiba-mais-btn:hover {
         transform: translateY(-2px);
+        box-shadow: 
+          0 0 12px rgba(78, 205, 196, 0.5),
+          0 6px 12px rgba(0,0,0,0.3);
       }
 
-      /* Caixas de texto informativo */
-      .info-box {
+      /* ADICIONADO: Área de texto informativo com brilho sutil */
+      .text-area {
         background-color: rgba(255,255,255,0.9);
         border-radius: 15px;
-        padding: 15px;
-        margin-bottom: 15px;
-        text-align: justify;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .info-box p {
-        color: #333;
-        line-height: 1.4;
-        font-size: 12px;
-        margin: 0;
-      }
-
-      /* Área de texto */
-      .text-area {
-        background-color: rgba(255,255,255,0.7);
-        border-radius: 10px;
-        padding: 15px;
+        padding: 20px;
         min-height: 80px;
         border: 2px dashed #ccc;
         margin-bottom: 20px;
-        max-width: 300px;
+        max-width: 600px;
         margin-left: auto;
         margin-right: auto;
+        box-shadow: 
+          0 0 5px rgba(78, 205, 196, 0.2),
+          0 2px 8px rgba(0,0,0,0.1);
       }
 
+      /* ADICIONADO: Texto da área informativa */
       .text-area p {
-        color: #666;
-        font-size: 12px;
+        color: #333;
+        font-size: 14px;
         margin: 0;
-        line-height: 1.4;
+        line-height: 1.6;
+        text-align: center;
       }
 
-      /* Responsividade */
-      @media (max-width: 375px) {
+      /* ===== ADICIONADO: RESPONSIVIDADE PARA AS ODS ===== */
+      
+      /* ADICIONADO: Desktop - 4 colunas */
+      @media (min-width: 1024px) {
         .ods-cards-container {
-          max-width: 280px;
-          gap: 10px;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 25px;
+        }
+      }
+
+      /* ADICIONADO: Tablet - 3 colunas */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .ods-cards-container {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+      }
+
+      /* ADICIONADO: Mobile grande - 2 colunas */
+      @media (min-width: 480px) and (max-width: 767px) {
+        .ods-cards-container {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
         }
         
-        .ods-title-header {
-          font-size: 28px;
-          top: 50px;
-          right: 15px;
-        }
-
         .ods-main-container {
           padding: 15px;
-          margin-top: 80px;
+          margin-top: 20px;
+        }
+        
+        /* ADICIONADO: Reduzir brilho em telas menores para melhor performance */
+        .ods-container {
+          box-shadow: 
+            0 0 8px rgba(78, 205, 196, 0.3),
+            0 0 15px rgba(78, 205, 196, 0.2),
+            0 4px 8px rgba(0,0,0,0.1);
         }
       }
 
-
-
+      /* ADICIONADO: Mobile pequeno - 1 coluna */
+      @media (max-width: 479px) {
+        .ods-cards-container {
+          grid-template-columns: 1fr;
+          gap: 15px;
+        }
+        
+        .ods-main-container {
+          padding: 10px;
+          margin-top: 15px;
+        }
+        
+        .ods-container {
+          padding: 10px;
+          /* ADICIONADO: Brilho reduzido para mobile pequeno */
+          box-shadow: 
+            0 0 6px rgba(78, 205, 196, 0.3),
+            0 0 12px rgba(78, 205, 196, 0.2),
+            0 2px 6px rgba(0,0,0,0.1);
+        }
+        
+        .ods-description {
+          font-size: 12px;
+        }
+      }
     </style>
   </head>
   <body class="telaTal">
@@ -320,150 +376,133 @@
         <span class="bar"></span>
       </div>
       <div class="ORGInfoHeader">
-        <h1>ODS'S</h1>
+        <h1>ODS'S</h1><!--ADICIONADO: Nome da tela alterado para ODS'S-->
       </div>
     </header>
-
     <main>
-      <!-- Logo MCM -->
       <div class="logo-container">
-        <img src="" alt="Logo MCM" />
+        <img src="" alt="Logo MCM" /><!--Foto do MCM que esta no figma-->
       </div>
 
+      <!-- ADICIONADO: INÍCIO DO CONTEÚDO DAS ODS -->
       <div class="ods-main-container">
-        <!-- Imagens das ODS -->
+        <!-- ADICIONADO: Container das imagens das ODS -->
         <div class="ods-cards-container">
 
-          <!-- ODS 1 -->
+          <!-- ADICIONADO: ODS 1 -->
           <div class="ods-container">
             <img src="img/ods1.jpg" alt="ODS 1 - Erradicar a Pobreza" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            <p class="ods-description">Erradicar a pobreza em todas as suas formas e em todos os lugares do mundo.</p>
           </div>
 
-          <!-- ODS 2 -->
-          <div class="ods-container"">
+          <!-- ADICIONADO: ODS 2 -->
+          <div class="ods-container">
             <img src="img/ods2.png" alt="ODS 2 - Fome Zero e Agricultura Sustentável" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <p class="ods-description">Acabar com a fome, alcançar a segurança alimentar e melhoria da nutrição e promover a agricultura sustentável.</p>
           </div>
 
-          <!-- ODS 3 -->
+          <!-- ADICIONADO: ODS 3 -->
           <div class="ods-container">
             <img src="img/ods3.png" alt="ODS 3 - Saúde e Bem-Estar" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <p class="ods-description">Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades.</p>
           </div>
 
-          <!-- ODS 4 -->
+          <!-- ADICIONADO: ODS 4 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 4 - Educação de qualidade" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods4.png" alt="ODS 4 - Educação de qualidade" class="ods-image" />
+            <p class="ods-description">Assegurar a educação inclusiva e equitativa de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos.</p>
           </div>
 
-          <!-- ODS 5 -->
+          <!-- ADICIONADO: ODS 5 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 5 - Igualdade de gênero" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods5.png" alt="ODS 5 - Igualdade de gênero" class="ods-image" />
+            <p class="ods-description">Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas.</p>
           </div>
 
-          <!-- ODS 6 -->
+          <!-- ADICIONADO: ODS 6 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 6 - Água potável e saneamento" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods6.png" alt="ODS 6 - Água potável e saneamento" class="ods-image" />
+            <p class="ods-description">Assegurar a disponibilidade e gestão sustentável da água e saneamento para todos.</p>
           </div>
 
-          <!-- ODS 7 -->
+          <!-- ADICIONADO: ODS 7 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 7 - Energia limpa e acessível" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods7.png" alt="ODS 7 - Energia limpa e acessível" class="ods-image" />
+            <p class="ods-description">Assegurar o acesso confiável, sustentável, moderno e a preço acessível à energia para todos.</p>
           </div>
 
-          <!-- ODS 8 -->
+          <!-- ADICIONADO: ODS 8 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 8 - Trabalho decente e crescimento econômico" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods8.png" alt="ODS 8 - Trabalho decente e crescimento econômico" class="ods-image" />
+            <p class="ods-description">Promover o crescimento econômico sustentado, inclusivo e sustentável, emprego pleno e produtivo e trabalho decente para todos.</p>
           </div>
 
-          <!-- ODS 9 -->
+          <!-- ADICIONADO: ODS 9 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 9 - Indústria, inovação e infraestrutura" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods9.png" alt="ODS 9 - Indústria, inovação e infraestrutura" class="ods-image" />
+            <p class="ods-description">Construir infraestruturas resilientes, promover a industrialização inclusiva e sustentável e fomentar a inovação.</p>
           </div>
 
-          <!-- ODS 10 -->
+          <!-- ADICIONADO: ODS 10 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 10 - Redução das desigualdades" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods10.jpg" alt="ODS 10 - Redução das desigualdades" class="ods-image" />
+            <p class="ods-description">Reduzir a desigualdade dentro dos países e entre eles.</p>
           </div>
 
-          <!-- ODS 11 -->
+          <!-- ADICIONADO: ODS 11 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 11 - Cidades e comunidades sustentáveis " class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods11.png" alt="ODS 11 - Cidades e comunidades sustentáveis" class="ods-image" />
+            <p class="ods-description">Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis.</p>
           </div>
           
-          <!-- ODS 12 -->
+          <!-- ADICIONADO: ODS 12 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 12 - Consumo e produção responsáveis" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods12.png" alt="ODS 12 - Consumo e produção responsáveis" class="ods-image" />
+            <p class="ods-description">Assegurar padrões de produção e de consumo sustentáveis.</p>
           </div>
           
-          <!-- ODS 13 -->
+          <!-- ADICIONADO: ODS 13 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 13 - Ação contra a mudança global do clima" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods13.png" alt="ODS 13 - Ação contra a mudança global do clima" class="ods-image" />
+            <p class="ods-description">Tomar medidas urgentes para combater a mudança climática e seus impactos.</p>
           </div>
 
-          <!-- ODS 14 -->
+          <!-- ADICIONADO: ODS 14 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 14 - Vida na água " class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods14.png" alt="ODS 14 - Vida na água" class="ods-image" />
+            <p class="ods-description">Conservação e uso sustentável dos oceanos, dos mares e dos recursos marinhos para o desenvolvimento sustentável.</p>
           </div>
 
-          <!-- ODS 15 -->
+          <!-- ADICIONADO: ODS 15 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 15 - Vida terrestre" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods15.png" alt="ODS 15 - Vida terrestre" class="ods-image" />
+            <p class="ods-description">Proteger, recuperar e promover o uso sustentável dos ecossistemas terrestres.</p>
           </div>
 
-          <!-- ODS 16 -->
+          <!-- ADICIONADO: ODS 16 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 16 - Paz, justiça e instituições eficazes" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods16.png" alt="ODS 16 - Paz, justiça e instituições eficazes" class="ods-image" />
+            <p class="ods-description">Promover sociedades pacíficas e inclusivas para o desenvolvimento sustentável.</p>
           </div>
 
-          <!-- ODS 17 -->
+          <!-- ADICIONADO: ODS 17 -->
           <div class="ods-container">
-            <img src="img/ods3.png" alt="ODS 17 - Parcerias e meios de implementação" class="ods-image" />
-            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-            </div>
+            <img src="img/ods17.png" alt="ODS 17 - Parcerias e meios de implementação" class="ods-image" />
+            <p class="ods-description">Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável.</p>
           </div>
         </div>
 
-        <!-- Botão Saiba Mais -->
+        <!-- ADICIONADO: Botão Saiba Mais -->
         <button class="saiba-mais-btn">Saiba Mais</button>
 
-        <!-- Área de texto -->
+        <!-- ADICIONADO: Área de texto informativo -->
         <div class="text-area">
-          <p>ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+          <p>ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global assinado durante a Cúpula das Nações Unidas em 2015 pelos 193 países membros.</p>
         </div>
       </div>
+      <!-- ADICIONADO: FIM DO CONTEÚDO DAS ODS -->
 
     </main>
-
     <div id="mySideMenu" class="side-menu">
       <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
       <a href="#">Mapa</a>
@@ -490,15 +529,15 @@
         document.getElementById('mobile-menu').classList.remove('active');
       }
 
-      /* === JAVASCRIPT PARA FUNCIONALIDADES DA PÁGINA ODS === */
+      /* ===== ADICIONADO: JAVASCRIPT PARA AS ODS ===== */
       
-      // Funcionalidade do botão "Saiba Mais"
+      // ADICIONADO: Funcionalidade do botão "Saiba Mais"
       document.querySelector('.saiba-mais-btn').addEventListener('click', function() {
         alert('Mais informações sobre os ODS serão exibidas aqui!');
       });
 
-      // Funcionalidade para as imagens das ODS
-      document.querySelectorAll('.ods-image-item').forEach(function(item, index) {
+      // ADICIONADO: Funcionalidade para clique nas ODS
+      document.querySelectorAll('.ods-container').forEach(function(item, index) {
         item.addEventListener('click', function() {
           const odsNumber = index + 1;
           alert('Você clicou na ODS ' + odsNumber + '!');
