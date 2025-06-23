@@ -188,6 +188,18 @@
         margin-top: 100px;
       }
 
+      .ods-container {
+        text-align:center;
+        margin: 20px;
+        cursor: pointer;
+        transition: transform 0.2s;
+
+      }
+
+      .ods-container:hover {
+        transform: scale(1.05);
+      }
+      
       /* Container das imagens ODS em grid */
       .ods-cards-container {
         display: grid;
@@ -200,14 +212,9 @@
       }
 
       /* Item individual da imagem ODS */
-      .ods-image-item {
-        cursor: pointer;
-        transition: transform 0.2s;
-      }
 
-      .ods-image-item:hover {
-        transform: scale(1.05);
-      }
+
+
 
       /* Imagens das ODS */
       .ods-image {
@@ -216,6 +223,12 @@
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         display: block;
+      }
+
+      .ods-description {
+        margin-top: 19px;
+        font-size: 16px;
+        color: #333;
       }
 
       /* Botão Saiba Mais */
@@ -294,6 +307,9 @@
           margin-top: 80px;
         }
       }
+
+
+
     </style>
   </head>
   <body class="telaTal">
@@ -317,29 +333,128 @@
       <div class="ods-main-container">
         <!-- Imagens das ODS -->
         <div class="ods-cards-container">
+
           <!-- ODS 1 -->
-          <div class="ods-image-item">
+          <div class="ods-container">
             <img src="img/ods1.jpg" alt="ODS 1 - Erradicar a Pobreza" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
           </div>
 
           <!-- ODS 2 -->
-          <div class="ods-image-item">
+          <div class="ods-container"">
             <img src="img/ods2.png" alt="ODS 2 - Fome Zero e Agricultura Sustentável" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
           </div>
 
           <!-- ODS 3 -->
-          <div class="ods-image-item">
+          <div class="ods-container">
             <img src="img/ods3.png" alt="ODS 3 - Saúde e Bem-Estar" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+
+          <!-- ODS 4 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 4 - Educação de qualidade" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+
+          <!-- ODS 5 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 5 - Igualdade de gênero" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+
+          <!-- ODS 6 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 6 - Água potável e saneamento" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+
+          <!-- ODS 7 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 7 - Energia limpa e acessível" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+
+          <!-- ODS 8 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 8 - Trabalho decente e crescimento econômico" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+
+          <!-- ODS 9 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 9 - Indústria, inovação e infraestrutura" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+
+          <!-- ODS 10 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 10 - Redução das desigualdades" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+
+          <!-- ODS 11 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 11 - Cidades e comunidades sustentáveis " class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+          
+          <!-- ODS 12 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 12 - Consumo e produção responsáveis" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+          
+          <!-- ODS 13 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 13 - Ação contra a mudança global do clima" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+
+          <!-- ODS 14 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 14 - Vida na água " class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+
+          <!-- ODS 15 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 15 - Vida terrestre" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+
+          <!-- ODS 16 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 16 - Paz, justiça e instituições eficazes" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
+          </div>
+
+          <!-- ODS 17 -->
+          <div class="ods-container">
+            <img src="img/ods3.png" alt="ODS 17 - Parcerias e meios de implementação" class="ods-image" />
+            <p class="ods-description">ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
+            </div>
           </div>
         </div>
 
         <!-- Botão Saiba Mais -->
         <button class="saiba-mais-btn">Saiba Mais</button>
-
-        <!-- Caixas informativas -->
-        <div class="info-box">
-          <p>ODS é a sigla para os Objetivos de Desenvolvimento Sustentável que fazem parte da chamada "Agenda 2030". Trata-se de um pacto global.</p>
-        </div>
 
         <!-- Área de texto -->
         <div class="text-area">
